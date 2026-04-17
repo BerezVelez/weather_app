@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consulta el clima actual y pronóstico de múltiples ciudades del mundo.">
+  <title>Clima — Consulta el tiempo actual</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <h1>🌤️ Clima</h1>
+      <p>Consulta el tiempo actual en cualquier ciudad</p>
+    </header>
+
+    <form class="search-bar" id="searchForm" autocomplete="off">
+      <input type="text" id="cityInput" placeholder="Buscar ciudad…" aria-label="Nombre de la ciudad">
+      <button type="submit" id="searchBtn" aria-label="Buscar clima">
+        🔍
+      </button>
+    </form>
+
+    <!-- Mensaje de estado global: carga / error -->
+    <div class="status-message" id="statusMsg" role="status" aria-live="polite"></div>
+
+    <!-- Contenedor de cards de ciudades (Fase 3: multi-ciudad) -->
+    <div class="cities-container" id="citiesContainer" role="region" aria-label="Resultados del clima"></div>
+
+    <!-- Botón para agregar otra ciudad -->
+    <button class="add-city-btn" id="addCityBtn" style="display:none" aria-label="Agregar otra ciudad">
+      <span class="add-icon">+</span> Agregar ciudad
+    </button>
+
+    <p class="credits">
+      Datos de <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>
+    </p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
